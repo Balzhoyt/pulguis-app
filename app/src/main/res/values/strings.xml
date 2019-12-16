@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">pulguis</string>
+    <string name="clear_button_text" translatable="false">Evaluar</string>
+    <string name="prediction_text_placeholder" translatable="false">Dibuja un Dígito</string>
+    <string name="classification_error_message" translatable="false">Error de clasificación: %s</string>
+
+</resources>
