@@ -38,7 +38,8 @@ class AprenderNumerosActivity : AppCompatActivity() {
         t1 = TextToSpeech(applicationContext,
             OnInitListener { status ->
                 if (status != TextToSpeech.ERROR) {
-                    t1!!.language = Locale.ITALIAN
+                    //t1!!.language = Locale.ITALIAN
+                    t1?.setLanguage(Locale("spa","MEX"))
                 }
             })
 

@@ -36,7 +36,8 @@ class AprenderABCActivity : AppCompatActivity() {
         t1 = TextToSpeech(applicationContext,
             TextToSpeech.OnInitListener { status ->
                 if (status != TextToSpeech.ERROR) {
-                    t1!!.language = Locale.ITALIAN
+                   // t1!!.language = Locale.ITALIAN
+                    t1?.setLanguage(Locale("spa","MEX"))
                 }
             })
 
@@ -102,7 +103,8 @@ class AprenderABCActivity : AppCompatActivity() {
                     }
 
                     val confianza = listOf(", eres un buen alumno, aprendes muy rápido",
-                        ",buen trabajo, pero puedes hacerlo mejor", ",buen trabajo, pero puedes hacerlo mejor",
+                        ",buen trabajo, pero puedes hacerlo mejor",
+                        ",Vaz muy bien, sigue asi",
                         ",te falta practicar, pero puedes hacerlo mejor",
                         ", podemos hacerlo mejor la próxima vez",
                         ", tu trabajo está dando frutos")
@@ -116,7 +118,7 @@ class AprenderABCActivity : AppCompatActivity() {
                     }
 
 
-                    val toSpeak = " $resultado  ${confianza[this!!.aleatorio(0,confianza.size)!!]}, pulsa de nuevo"
+                    val toSpeak = " $resultado  ${confianza[this?.aleatorio(0,confianza.size-1)!!]}, pulsa de nuevo"
                     //Toast.makeText(applicationContext, toSpeak, Toast.LENGTH_SHORT).show()
                     t1!!.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null)
 

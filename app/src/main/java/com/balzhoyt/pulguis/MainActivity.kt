@@ -16,10 +16,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         getSupportActionBar()!!.hide()
 
+
         t1 = TextToSpeech(applicationContext,
             TextToSpeech.OnInitListener { status ->
                 if (status != TextToSpeech.ERROR) {
-                    t1!!.language = Locale.ITALIAN
+                    //t1!!.language = Locale
+                    t1?.setLanguage(Locale("spa","MEX"))
                 }
             })
 
